@@ -1,5 +1,5 @@
 :root {
-  --text-color-blue-100:  hsl(240, 6%, 50%); 
+  --text-color-blue-100: hsl(240, 6%, 50%);
   --text-color-blue-200: hsl(237, 12%, 33%);
   --text-color-blue-300: hsl(238, 29%, 16%);
   --accent-color-red: hsl(14, 88%, 65%);
@@ -40,7 +40,7 @@ body {
   align-items: center;
 }
 h1 {
-  margin: 3.2em 0 1em 0;
+  margin: 3.2em 0 0.7em 0;
   text-align: center;
   font-size: 3.2rem;
   font-weight: 700;
@@ -54,11 +54,13 @@ h2 {
 }
 .container {
   position: relative;
-  max-width: 520px;
+  max-width: 420px;
   width: 85%;
   height: max-content;
   background-color: var(--neutral-color-white);
-  border-radius: 15px;
+  border-radius: 20px;
+  margin-top: 4em;
+  box-shadow: 0 35px 25px hsla(271, 40%, 15%, 0.205);
 }
 .accordion {
   padding: 2em 2em 3em 2em;
@@ -68,41 +70,51 @@ h2 {
   top: -105px;
   left: 50%;
   transform: translateX(-55%);
+  filter: drop-shadow(0px 30px 1px hsl(286, 45%, 94%));
 }
 
 .accordion__item {
   border-bottom: 1px solid var(--dividers-color);
   margin-bottom: 1em;
 }
-.accordion__item__text {
-  padding-bottom: 1em;
+
+.accordion__subtitle {
+  margin-bottom: 0.5em;
 }
-.accordion__item__subtitle{
-  margin-bottom: 0.5em ;
+.accordion__subtitle::after {
+  content: url("images/icon-arrow-down.svg");
+  color: var(--accent-color-red);
+  float: right;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
 }
-.accordion__item__subtitle::after{
-  content: url('images/icon-arrow-down.svg');
-    color: var(--accent-color-red);
-    float: right;
+.active.accordion__subtitle::after {
+  content: url("images/icon-arrow-down.svg");
+  color: var(--accent-color-red);
+  transform: rotate(180deg);
+  float: right;
 }
-.accordion__item__subtitle:hover{
-   color: var(--accent-color-red);
-   cursor: pointer;
+.accordion__subtitle:hover {
+  color: var(--accent-color-red);
+  cursor: pointer;
 }
-.active{
-   font-weight: 700;
-   color: var(--text-color-blue-300);
- }
- .hidden {
-   display: none;
- }
-.attribution {
-  width: max-content;
+.active.accordion__subtitle {
+  font-weight: 700;
+  color: var(--text-color-blue-300);
+}
+.accordion__text {
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms ease max-height;
+  margin-bottom: 0;
+  padding-right: 1.4em;
+}
+footer {
+  width: 100%;
   position: fixed;
   font-size: 1.1rem;
-  left: 50%;
-  transform: translate(-50%, 0);
+  text-align: center;
   bottom: 1em;
+  color: var(--text-color-blue-300);
 }
 .attribution a {
   color: var(--brightBlue);
