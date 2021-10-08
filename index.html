@@ -20,13 +20,15 @@
     <main class="container">
       <div class="accordion">
         <picture class="accordion__img">
-          <source media="(min-width: 1230px)"
+          <source media="(min-width: 901px)"
              srcset="./images/illustration-woman-online-desktop.svg">
-          <source media="(min-width: 360px)"
+          <source media="(max-width: 900px)"
              srcset="./images/illustration-woman-online-mobile.svg"> 
           <img src="./images/illustration-woman-online-mobile.svg"
           alt="people in a meeting">
        </picture>
+       <img class="box-img" src="images/illustration-box-desktop.svg" alt="">
+       <div class="accordion__options">
         <h1 class="accordion__title">FAQ</h1>
         <div class="accordion__item">
           <h2 class="accordion__subtitle">
@@ -62,6 +64,14 @@
             business hours.
           </p>
         </div>
+        <div class="accordion__item">
+          <h2 class="accordion__subtitle">Do you provide additional support?</h2>
+          <p class="accordion__text">
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </p>
+        </div>
+       </div>
+
       </div>
     </main>
 
