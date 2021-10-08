@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![FAQ accordion card](https://github.com/Infinit-dot/frontendmentorCh05/blob/main/design/desktop-preview.jpg?raw=true)
+![FAQ accordion card](https://github.com/Infinit-dot/frontendmentor05/blob/main/design/desktop-preview.jpg?raw=true)
 
 ### Links
 
